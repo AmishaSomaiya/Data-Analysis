@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>Tuning Play-Site</title>
+    <link rel="stylesheet" type="text/css" href="parallel.css" />
+  </head>
+  <body>
+  <div id="header">
+    <h1>Tuning Play-Site</h1>
+    <button title="Zoom in on selected data" id="keep-data" disabled="disabled">Keep</button>
+    <button title="Remove selected data" id="exclude-data" disabled="disabled">Exclude</button>
+    <button title="Export data as CSV" id="export-data">Export</button>
+    <div class="controls">
+      <strong id="rendered-count"></strong>/<strong id="selected-count"></strong><!--<strong id="data-count"></strong>-->
+      <div class="fillbar"><div id="selected-bar"><div id="rendered-bar">&nbsp;</div></div></div>
+      Lines at <strong id="opacity"></strong> opacity.
+      <span class="settings">
+        <button id="hide-ticks">Hide Ticks</button>
+        <button id="show-ticks" disabled="disabled">Show Ticks</button>
+        <button id="dark-theme">Dark</button>
+        <button id="light-theme" disabled="disabled">Light</button>
+      </span>
+    </div>
+    <div style="clear:both;"></div>
+  </div>
+  <div id="chart">
+    <canvas id="background"></canvas>
+    <canvas id="foreground"></canvas>
+    <canvas id="highlight"></canvas>
+    <svg></svg>
+  </div>
+  <div id="wrap">
+    <div class="third" id="controls">
+      <div class="bright">
+        <h2>Description</h3>
+        <p>
+            This is a <a href="https://www.analyticsvidhya.com/blog/2021/11/visualize-data-using-parallel-coordinates-plot/#:~:text=A%20Parallel%20coordinates%20plot%20is,and%20parallel%20to%20each%20other."> parallel coordinates</a> explorer of Hyper-parameters tuned for a ResNet50 model on CIFAR-10 dataset. Data is available <a href="https://github.com/cse512-23s/Tuning-PlaySite/blob/main/A3_TuningPlay-Site_Data.csv"> here.</a> The Parallel Coordinates display the Accuracy, Loss and F1 Scores colored by Optimizer across 3 dimensions : Epochs, Batch Size and Learning Rate. 
+        </p>
+        
+      </div>
+      <div class="little-box">
+        <h2>Exploration Guide</h3>
+        <p>
+            Hover over the viz, buttons and labels to view controls.<br/>
+            <p>
+                <a href="http://eagereyes.org/techniques/parallel-coordinates#brushing">Brush</a> the visualization to update other charts on this page.
+            </p>
+        <p>
+          <strong>Brush</strong>: Drag vertically along an axis.<br/>
+          <strong>Remove Brush</strong>: Tap the axis background.<br/>
+          <strong>Reorder Axes</strong>: Drag an axis label horizontally.<br/>
+          <strong>Remove Axis</strong>: Drag axis label to the left edge.<br/>
+          <strong>Reset Axis</strong>: Tap an axis label.<br/>
+          <strong>Reset Visualization</strong>: Refresh webpage.<br/>
+        </p>
+      </div>
+      <div class="little-box">
+        <h3>References</h3>
+          <p>
+            Adapted from examples by <a href="https://gist.github.com/mbostock/1341021">Mike Bostock </a>, <a href="https://d3-graph-gallery.com/parallel.html">D3 Gallery</a> and <a href="https://gist.github.com/syntagmatic/482706e0638c67836d94b20f0cb37122">Kai Chang</a>.
+          </p>
+        </p>
+      </div>
+    </div>
+    <div  class="third">
+      <small>
+        <!--Last rendered <strong id="render-speed"></strong> lines-->
+      </small>
+      <h3>Optimizer</h3>
+      <p id="legend">
+      </p>
+    </div>
+    <div class="third">
+        <h3>Hyper-Parameters (Hover to Highlight) <input type="text" id="search" placeholder="Search (Opt--Epo--BS--LR)"></input></h3>
+        <p id="sample-list">
+      </p>
+    </div>
+  </div>
+  </body>
+  <script src="https://d3js.org/d3.v2.js"></script>
+  <script src="https://underscorejs.org/underscore.js"></script>
+  <script src="page5.js"></script>
+</html>

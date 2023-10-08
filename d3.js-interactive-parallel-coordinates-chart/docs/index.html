@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>Tuning PlaySite</title>
+    <link id="css-link" rel="stylesheet" type="text/css" href="parallel.css" />
+  </head>
+  <body class="dark">
+  <div id="header">
+    <h1>Tuning PlaySite</h1>
+  </div>
+  
+  <div id="chart">
+    <canvas id="background"></canvas>
+    <canvas id="foreground"></canvas>
+    <canvas id="highlight"></canvas>
+    <svg></svg>
+  </div>
+  <br/>
+  <div class="controls">
+      Selection Count:
+      <strong id="rendered-count"></strong>/<strong id="selected-count"></strong>
+      <div class="fillbar"><div id="selected-bar"><div id="rendered-bar">&nbsp;</div></div></div>
+      <div style="clear:both;"></div>
+  </div>
+  <br/>
+
+  <div id="wrap">
+    <div class="third">
+      <h3>Hyper-Parameters (Hover to Highlight) <input type="text" id="search" placeholder="Search (Opt--Epo--BS--LR)"></input></h3>
+      <p id="sample-list">
+      </p>
+    </div>
+    <div  class="third">
+      <h3>Optimizer (Select to View)</h3>
+      <p id="legend">
+      </p>
+    </div>
+    <div class="third" id="controls">
+      <div class="bright">
+        <br/>
+        <h2>Description</h3>
+        <p>
+          This is a <a href="https://www.analyticsvidhya.com/blog/2021/11/visualize-data-using-parallel-coordinates-plot/#:~:text=A%20Parallel%20coordinates%20plot%20is,and%20parallel%20to%20each%20other."> parallel coordinates</a> explorer of Hyper-parameters tuned for a ResNet50 model on CIFAR-10 dataset. Data is available <a href="https://github.com/cse512-23s/Tuning-PlaySite/blob/main/A3_TuningPlay-Site_Data.csv"> here.</a> The Parallel Coordinates display the Accuracy, Loss and F1 Scores colored by Optimizer across 3 dimensions : Epochs, Batch Size and Learning Rate. 
+        </p>
+      </div>
+      <br/>
+      <div class="little-box">
+        <h2>Exploration Guide</h3>
+        <p>
+          Hover over the viz, buttons and labels to view controls.<br/>
+          <p>
+            <a href="http://eagereyes.org/techniques/parallel-coordinates#brushing">Brush</a> the visualization to update other charts on this page.
+          </p>
+          <strong>Brush</strong>: Drag vertically along an axis.<br/>
+          <strong>Remove Brush</strong>: Tap the axis background.<br/>
+          <strong>Reorder Axes</strong>: Drag an axis label horizontally.<br/>
+          <strong>Reset Visualization</strong>: Refresh webpage.<br/><br/>
+        </p>
+      </div>
+      <div class="little-box">
+        <h2>References</h4>
+          <p>
+          Adapted from examples by <a href="https://gist.github.com/mbostock/1341021">Mike Bostock </a>, <a href="https://d3-graph-gallery.com/parallel.html">D3 Gallery</a> and <a href="https://gist.github.com/syntagmatic/482706e0638c67836d94b20f0cb37122">Kai Chang</a>.
+          </p>
+        </p>
+      </div>
+    </div>
+  </div>
+  </body>
+  <script src="d3.v2.js"></script>
+  <script src="underscore.js"></script>
+  <script src="parallel.js"></script>
+  
+  <!-- Force CSS reload -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var cssLink = document.getElementById("css-link");
+      var timestamp = new Date().getTime();
+      cssLink.href = cssLink.href + "?v=" + timestamp;
+    });
+  </script>
+  
+</html>
