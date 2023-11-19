@@ -1,8 +1,10 @@
 
 
-## Summary of SELECT Queries and Schema : 
+# Summary of SELECT Queries and Schema : 
 
-# Complete SELECT query
+## Queries
+
+### Complete SELECT query
 ```
 SELECT DISTINCT column, AGG_FUNC(column_or_expression), …
 FROM mytable
@@ -16,7 +18,7 @@ FROM mytable
 ```
 
 
-# Query order of execution
+### Query order of execution
 1. FROM and JOINS
 2. WHERE
 3. GROUP BY
@@ -27,8 +29,8 @@ FROM mytable
 8. LIMIT / OFFSET
 
 
-## SCHEMA
-# Insert, update or delete rows
+# SCHEMA
+### Insert, update or delete rows
 ```
 INSERT INTO mytable
 (column, another_column, …)
@@ -57,7 +59,7 @@ WHERE condition;
 ```
 
 
-# Tables : create, update or drop
+### Tables : create, update or drop
 -- create table
 ```
 CREATE TABLE IF NOT EXISTS mytable (
@@ -109,7 +111,9 @@ RENAME TO new_table_name;
 DROP TABLE IF EXISTS mytable;
 ```
 
-Reference : Interactive learning and exercises by sqlbolt.com
+### Reference : 
+
+Interactive learning and exercises by sqlbolt.com
 
 
 
