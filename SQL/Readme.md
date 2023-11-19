@@ -29,7 +29,7 @@ FROM mytable
 8. LIMIT / OFFSET
 
 
-# SCHEMA
+## SCHEMA
 ### Insert, update or delete rows
 ```
 INSERT INTO mytable
