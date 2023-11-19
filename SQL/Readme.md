@@ -1,6 +1,6 @@
 
 
-# Summary of SELECT Queries and Schema : 
+## Summary of SELECT Queries and Schema : 
 
 ## Queries
 
