@@ -1,8 +1,8 @@
 
 
-# Summary of SELECT Queries and Schema : 
+## Summary of SELECT Queries and Schema : 
 
-## Complete SELECT query
+# Complete SELECT query
 ```
 SELECT DISTINCT column, AGG_FUNC(column_or_expression), …
 FROM mytable
