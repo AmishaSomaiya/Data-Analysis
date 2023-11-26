@@ -10,8 +10,9 @@ For details, please visit : https://github.com/cse512-23s/Tuning-PlaySite
 
 <p align="center">
   <img src="Images/d3_parallelcoords.gif" alt="Fig.1. Parallel Co-ordinates" width="300" height="200" />
+  <strong>Fig.1. Parallel Co-ordinates</strong>
 </p>
-**Fig.1. Parallel Co-ordinates**
+
 
 
 <p align="center">
