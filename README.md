@@ -4,11 +4,15 @@ This repository contains data analysis and visualizations generated using Tablea
 ### Tuning-PlaySite : Collaborative Data Analysis and Visualization Project 
 ### Tool : D3, Javascript 
 For details, please visit : https://github.com/cse512-23s/Tuning-PlaySite 
-Contributions :
+
+
+### Contributions :
 
 <p align="center">
   <img src="Images/d3_parallelcoords.gif" alt="Fig.1. Parallel Co-ordinates" width="300" height="200" />
 </p>
+**Fig.1. Parallel Co-ordinates**
+
 
 <p align="center">
   <img src="Images/tuning-playsite-pg3.png" />
