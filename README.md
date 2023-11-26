@@ -2,7 +2,7 @@
 This repository contains data analysis and visualizations generated using Tableau, D3.js, VegaAltair-Python, PowerBI and SQL. 
 
 ### Tuning-PlaySite : Collaborative Data Analysis and Visualization Project 
-### Tool : D3, Javascript 
+### Tools : D3, Javascript 
 For details, please visit : https://github.com/cse512-23s/Tuning-PlaySite 
 
 
