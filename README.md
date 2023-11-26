@@ -13,6 +13,10 @@ For details, please visit : https://github.com/cse512-23s/Tuning-PlaySite
   <strong>Fig.1. Parallel Co-ordinates</strong>
 </p>
 
+<p align="center">
+  <strong>Your Bold and Centered Text</strong>
+</p>
+
 
 
 <p align="center">
