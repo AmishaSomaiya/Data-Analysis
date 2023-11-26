@@ -7,7 +7,7 @@ For details, please visit : https://github.com/cse512-23s/Tuning-PlaySite
 Contributions :
 
 <p align="center">
-  <img src="Images/d3_parallelcoords.gif" />
+  <img src="Images/d3_parallelcoords.gif" alt="Fig.1. Parallel Co-ordinates" width="300" height="200" />
 </p>
 
 <p align="center">
