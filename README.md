@@ -23,6 +23,10 @@ For details, please visit : https://github.com/cse512-23s/Tuning-PlaySite
 </p>
 
 <p align="center">
+  <strong>Fig.2. Parallel Co-ordinates</strong>
+</p>
+
+<p align="center">
   <img src="Images/tuning-playsite-pg4-1.png" width="500" height="300" />
 </p>
 
