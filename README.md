@@ -6,7 +6,7 @@ This repository contains data analysis and visualizations generated using Tablea
 For details, please visit : https://github.com/cse512-23s/Tuning-PlaySite 
 
 
-### Interactive Plots Contributions :
+### Contributions :
 
 <p align="center">
   <img src="Images/d3_parallelcoords.gif" alt="Fig.1. Interactive Parallel Co-ordinates" width="500" height="300" />
