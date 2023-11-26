@@ -1,8 +1,9 @@
-# Data-Visualization
-This repo contains data visualizations generated using VegaAltair-Python, Tableau and D3.js for the CSE512 Data Visualization course taken in Spring 2023. 
+# Data-Analysis and Visualization
+This repository contains data analysis and visualizations generated using Tableau, D3.js, VegaAltair-Python, PowerBI and SQL. 
 
-Tuning Playsite -a Hyperparameter Tuning Data Visualization for Machine Learning is the course's final project using exclusive D3.js can be found here : 
+For the collaborative data analysis project in a team of 5, visit the following link : 
 https://github.com/cse512-23s/Tuning-PlaySite 
 cse512-23s.github.io/Tuning-PlaySite/  
+
 
 
