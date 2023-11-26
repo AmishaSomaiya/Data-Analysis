@@ -1,0 +1,85 @@
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  background-color: #ffffff;
+  font-family: 'Lora', serif;
+}
+
+h1.title {
+  padding: 6px;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 2em;
+  color: #333;
+}
+
+html, body, .iframe-container, iframe {
+  /* width: 99%; */
+  border: none;
+  padding: 0;
+  overflow: hidden;
+}
+
+.iframe-container {
+  position: relative;
+  flex-grow: 1; 
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.page-indicator {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  color: #333;
+}
+
+.page-number {
+  margin: 0 10px;
+  cursor: pointer;
+  color: #999;
+  transition: color 0.3s;
+}
+
+.page-number:hover {
+  color: #333;
+}
+
+.current-page {
+  color: #333;
+  font-weight: bold;
+}
+
+.prev-page, .next-page {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  color: #999;
+  transition: color 0.3s;
+}
+
+.prev-page:hover, .next-page:hover {
+  color: #333;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+.hidden {
+  visibility: hidden;
+}

@@ -1,0 +1,108 @@
+#section-4-plots {
+  display: flex;
+  justify-content: center;
+  padding: 0px 0;
+}
+
+.row-4-plots {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.slider-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.slider {
+  position: relative;
+  width: 200px;
+  /* margin-left: +400px; */
+}
+.slider input {
+  width: 100%;
+}
+.slider-labels {
+  left: 0;
+  width: 100%;
+  top: 58px;
+  display: flex;
+  justify-content: space-between;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+.beta2-text {
+  text-align: center;
+}
+.label-left {
+  position: absolute;
+  left: 0;
+}
+
+.label-middle {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.label-right {
+  position: absolute;
+  right: 0;
+}
+.line {
+  fill: none;
+  stroke: #ffab00;
+  stroke-width: 3;
+}
+.axis-label {
+  font-family: sans-serif;
+  font-size: 14px;
+}
+.axis-extralabel {
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+}
+.caption {
+  font-family: sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+}
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #ccc;
+  shape-rendering: crispEdges;
+}
+.axis text {
+  font-family: sans-serif;
+  font-size: 10px;
+}
+.chart1 {
+  display: block;
+  margin: auto;
+  height: 500px;
+  width: 500px;
+  }
+.chart2 {
+  display: block;
+  margin: auto;
+  height: 500px;
+  width: 500px;
+}
+.chart3 {
+  display: block;
+  margin: auto;
+  height: 500px;
+  width: 500px;
+  }
+.chart4 {
+  display: block;
+  margin: auto;
+  height: 500px;
+  width: 500px;
+}

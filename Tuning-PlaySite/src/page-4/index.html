@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tuning PlaySite.js</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <link rel="stylesheet" href="styles-3.css">
+  <link rel="stylesheet" href="styles-4-plots.css">
+  <link rel="stylesheet" href="../theme/theme.css">
+</head>
+<body>
+  <div class="main-container-lg">
+    <h2>2. Choosing Optimizer</h2>
+    <p>As seen in previous page, individual nuisance hyperparameters need to be tuned before comparing optimizers. As an example, consider the most popular optimizer: Adam. Below is a visual representation of tuning Adam with nuisance hyperparameters beta1 and beta2 along with fixed hyperparameter of Epochs at 10 and 100.</p>
+
+    <div class="slider-container">
+      <div class="slider">
+        <div class="beta2-text">Beta 2</div>
+        <input type="range" min="0" max="2" value="1" step="1" id="mySlider">
+        <div class="slider-labels">
+          <span class="label-left">0.99</span>
+          <span class="label-middle">0.999</span>
+          <span class="label-right">0.9999</span>
+        </div>
+      </div>
+    </div>
+    
+    <div id="section-4-plots">
+      <div class="row-4-plots">
+        <svg id="svga" width="350" height="250"></svg>
+        <svg id="svgccc" width="350" height="250"></svg>
+        
+      </div>
+      <div class="row-4-plots">
+        <svg id="svgb" width="350" height="250"></svg>
+        <svg id="svgd" width="350" height="250"></svg>
+      </div>
+    </div><p><span class="custom-line">LR*=log<sub>10</sub> (Learning Rate)</span></p>
+    <br>
+    <p>After tuning the nuisance hyperparameters for each hyperparameter independently, we can compare the optimizers.</p>
+    <p>Click on the contours to see how different optimizers converge to global minima (left) and local minima (right).</p>
+    <p>Click on any optimizer round button to enable/disable view for that optimzer. All optimizers are viewed by default. </p>
+    <p>Click on sub-optimal and/or optimal parameter buttons to compare performance. Optimal parameter view on by default. </p>
+    
+    <div id="plot3"></div>
+    <br>
+    <div id="buttons-section">
+      <button id="learningRate1" class="button">Sub-Optimal Parameters</button>
+      <button id="learningRate2" class="button active">Optimal Parameters</button>
+    
+    </div>
+    
+    <p>As seen above, there is more oscillation at sub-optimal choice of parameters whereas at optimal parameters, Adam works the best as it converges to global minima more often than the other optimizers.</p>
+  </div>
+  
+  <script src="https://d3js.org/d3-contour.v1.min.js"></script>
+  <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>  
+  <script src="script-4-plots.js"></script>
+  <script src="script-3.js"></script>
+
+
+ 
+</body>
+</html>

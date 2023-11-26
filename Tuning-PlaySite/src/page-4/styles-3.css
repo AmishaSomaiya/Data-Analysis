@@ -1,0 +1,47 @@
+#plot3 {
+    display: flex;
+    justify-content: center;
+}
+
+.sgd {
+    stroke: black;
+}
+
+.rmsprop {
+    stroke: blue;
+}
+
+.adam {
+    stroke: red;
+}
+
+.SGD {
+    fill: black;
+}
+
+
+.RMSProp {
+    fill: blue;
+}
+
+.Adam {
+    fill: red;
+}
+
+circle:hover {
+  fill-opacity: .3;
+}
+
+#buttons-section {
+    display: flex;
+    justify-content: center;
+  }
+
+.button {
+    font-family: "Open Sans",Courier, monospace;
+    text-align: center;
+}
+
+.button.active {
+  background-color: #999; /* Set the shade color */
+}

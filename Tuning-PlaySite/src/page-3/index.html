@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>Tuning PlaySite-Optimizer</title>
+  <link rel="stylesheet" href="animate.css">
+  <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'> -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../theme/theme.css">
+</head>
+<body>
+    <div class="main-container">
+        <h2>2. Choosing Optimizer</h2>
+        <p>Optimizers determine how the model's weights are updated during training. Each optimizer has further tunable parameters like learning rate, and momentum. So how do we start?</p>
+        <p>Can we use the same learning rate and other individual hyperparameters to compare different optimizers?</p>
+        
+        <div class="box-container">
+            <div class="box" id="box">
+                <span>&#x25ac&#x25ac Adam</span>
+                <span>&#x25aa&#x25aa&#x25aa&#x25aa RMSprop</span>
+                <span>&#x25ac &#x25ac SGD</span>
+            </div>
+        </div>
+        <div class="area-row-container">
+            <div class="area-row">
+                
+                <div id="area1"></div>
+            </div>
+        </div>
+        <div id="buttons-section">
+        <button id="viewAdam" class="button">Adam</button>
+        <button id="viewRMSprop" class="button">RMSprop</button>
+        <button id="viewSGD" class="button">SGD</button>
+        <button id="viewAll" class="button no-shade">View All</button>
+        <button id="clear" class="button no-shade">Clear All</button>
+        </div>
+
+        <p>It is observed that Adam's best learning rate (1e-04) is not same as RMSProp and SGD's best learning rate (1e-02). So comparing different optimizers with the same individual hyperparameters is not fair. How do we deal with this?</p>
+        <h3>SNF Strategy</h3>
+        <p>One strategy is to find Scientific(S), Nuisance(N), and Fixed(F) hyperparameters in the experiment. All hyperparameters come under one of these three categories. Scientific hyperparameters are the parameters whose effect on performance metrics is being measured. These hyperparameters are often the ones that we want to tune to achieve better performance. In the above case, Adam, SGD, and RMSProp are scientific hyperparameters.</p>
+        <p>Nuisance hyperparameters are those that are not of direct interest to us but need to be optimized to fairly compare different values of the scientific hyperparameters. Learning rate and momentum come under this category. </p>
+        <p>Fixed hyperparameters are those whose values are set and do not change during the experiments. We want to fix their values to ensure consistency across different experiments. For instance, random seed or number of layers (50 in above) or number of epochs.</p>
+
+
+        <div id="tooltip" class="hidden">
+            <p><strong>Description</strong></p>
+            <p><span id="value">description</span></p>
+        </div>
+    </div>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

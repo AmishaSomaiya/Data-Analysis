@@ -1,0 +1,259 @@
+{
+    "name": "Hyperparameters",
+    "tooltip": "Configuration variables set before training.",
+    "children": [
+     {
+      "name": "Settings",
+      "tooltip": "General Settings of Neural Networks",
+      "children": [
+       {
+        "name": "Batch Size",
+        "tooltip": "Number of training examples used in single iteration of training",
+        "children": [
+         {"name": "32", "size": 1000},
+         {"name": "64", "size": 1000},
+         {"name": "128", "size": 1000},
+         {"name": "256", "size": 1000}
+        ]
+       },
+       {
+        "name": "Epochs",
+        "tooltip": "Number of times to iterate over entire training data",
+        "children": [
+         {"name": "10", "size": 1000},
+         {"name": "50", "size": 1300},
+         {"name": "100", "size": 1300},
+         {"name": "200", "size": 1300},
+         {"name": "500", "size": 1100}
+        ]
+       },
+       {
+         "name": "Class Weight",
+         "tooltip": "Optional dictionary specifying the class weights",
+         "size":2000
+        },
+       {
+        "name": "Activation Function",
+        "tooltip": "Introduces non-linearity by transforming neuron's inputs",
+        "children": [
+         {"name": "ReLU", "tooltip": "f(x)=max(0,x)","children":[
+            {
+               "name": "LeakyReLU", 
+               "tooltip": "f(x)=max(ax,x)",
+               "children": [
+                  {"name": "Alpha", "tooltip": "Slope of function for negative inputs",
+                 "children": [
+                  {"name": "0.01", "size": 200},
+                  {"name": "0.1", "size": 200},
+                  {"name": "0.2", "size": 500}
+                 ]}
+              ]},
+              {"name": "Threshold", "tooltip": "Threshold below which values will be set to zero", "size":500}
+         ]},
+         {"name": "Tanh",  "tooltip": "f(x)=(exp(x) - exp(-x))/(exp(x) + exp(-x))","size": 800},
+         {"name": "Sigmoid", "tooltip": "f(x)=1 / (1 + exp(-x))","size": 1000},
+         {"name": "Softmax", "tooltip": "f(x_i)=exp(x_i)/sum(exp(x_j)", "children":[
+            {"name":"Axis", "tooltip":"Axis along which softmax normalization is applied", "size":500}
+         ]}
+        ]
+       },
+       {
+        "name": "Max Queue Size",
+        "tooltip": "Maximum number of samples that can be loaded into memory for training",
+        "children":[{"name":"10", "size":300}]
+       },
+       {
+        "name": "Worker",
+        "tooltip": "Maximum number of processes or threads to use for data loading during training",
+        "children":[{"name":"1", "size":300}]
+       },
+       {
+        "name": "MultiProcessing",
+        "tooltip": "Determines whether to use multiprocessing for data loading during training",
+        "children":[{"name":"False", "size":150},{"name":"True", "size":150}]
+       }
+      ]
+     },
+     {
+      "name": "Network Architecture",
+      "tooltip": "Tunable Parameters in a CNN",
+      "children": [
+       {"name": "Number of Layers", "tooltip": "Number of Input, Hidden and Output Layers","size": 7500},
+       {"name": "Neurons per Layer","tooltip": "Number of neurons in each layer", "size": 7000},
+       {"name": "Number of Filters", "tooltip": "Number of feature maps or channels generated in a layer","size": 1000},
+       {"name": "Layer Weight Initializers", "tooltip": "Defines way to set the initial random weights of layers", 
+      "children":[
+         {"name": "Normal", "tooltip":"Generate tensors with a normal distributions", 
+         "children":[
+            {"name":"Mean", "tooltip":"Mean of normal distribution", "children":[{"name":"0", "size":550}]},
+            {"name":"StdDev", "tooltip":"Standard Deviation of normal distribution", "children":[{"name":"0.05", "size":550}]}
+         ]},
+         {"name": "Uniform", "tooltip":"Generate tensors with a uniform distributions", 
+         "children":[
+            {"name":"Minval", "tooltip":"Lower Bound", "children":[{"name":"0.05", "size":450}]},
+            {"name":"Maxval", "tooltip":"Upper Bound", "children":[{"name":"0.05", "size":450}]}
+         ]}
+      ]},
+       {"name": "Kernel Size", 
+       "tooltip": "Dimensions of Filter/Kernel",
+       "children": [
+        {"name": "(3x3)", "size": 3000},
+        {"name": "(5x5)", "size": 1000},
+        {"name": "(7x7)", "size": 500}
+       ]
+    },
+        {"name": "Stride",
+        "tooltip": "Step size at which kernel moves across input data", 
+            "children": [
+             {"name": "1", "size": 2000},
+             {"name": "2", "size": 1000},
+             {"name": "3", "size": 500}
+            ]
+     },
+        {"name": "Pooling", 
+        "tooltip": "Technique used to reduce spatial dimensions",
+             "children": [
+              {"name": "Max", "size": 2000},
+              {"name": "Avg", "size": 700},
+              {"name": "Sum", "size": 300}
+             ]
+        },
+           {"name": "Padding", 
+           "tooltip": "Adding extra layers to input data",
+       "children": [
+         {"name": "Padding Type", "tooltip": "Type of Padding to be applied",
+         "children":[
+            {"name":"Valid", "tooltip": "No Padding", "size":1000},
+            {"name":"Zero", "tooltip": "Zero-Padding around borders", "size":2000}
+         ]
+         }
+       ]
+    }
+]
+     },
+     {
+      "name": "Optimizers",
+      "tooltip": "Algorithms used to adjust model parameters(weight & biases)",
+      "children": [
+       {
+        "name": "SGD",
+        "tooltip": "Computes gradients on small batches of data",
+        "children": [
+         {"name": "Learning Rate", "tooltip": "Step size at which models weights are updated", "children": [
+            {"name": "0.01", "size": 2500},
+            {"name": "0.001", "size": 2500}
+           ]},
+         {"name": "Momentum", "tooltip": "Adds momentum into updates to acclerate","children": [
+            {"name": "0.9", "size": 300},
+            {"name": "0.95", "size": 300}
+           ]},
+         {"name": "Nesterov", "tooltip": "Extension of momentum method", "size": 700},
+         {"name": "Weight Decay", "tooltip": "Weight decay","size": 700}
+        ]
+       },
+       {
+        "name": "Adam",
+        "tooltip": "Combination of adaptive momentum estimation and RMSProp",
+        "children": [
+         {"name": "Learning Rate", "tooltip": "Step size at which models weights are updated","children": [
+            {"name": "0.001", "size": 2500},
+            {"name": "0.0001", "size": 2500}
+           ]},
+         {"name": "Beta1", "tooltip": "Exponential decay rate for first momemnt estimate","children": [
+            {"name": "0.9", "size": 800}
+           ]},
+         {"name": "Beta2", "tooltip": "Exponential decay rate for second moment estimate", "children": [
+            {"name": "0.999", "size": 300}
+           ]},
+         {"name": "Epsilon", "tooltip": "Small value added to avoid devision by zero","children": [
+            {"name": "1e-7", "size": 500}
+           ]},
+         {"name": "WeightDecay", "tooltip": "Weight decay","size": 300},
+         {"name":"AMSGrad", "tooltip":"AMSGrad variation of Adam", "size":100}
+        ]
+       },
+       {
+        "name": "RMSProp",
+        "tooltip": "Uses exponentially weighted moving average of square gradients to adapt LR",
+        "children": [
+         {"name": "Learning Rate", "tooltip": "Step size at which models weights are updated","children": [
+            {"name": "0.001", "size": 2500},
+            {"name": "0.0001", "size": 2500}
+           ]},
+         {"name": "Weight Decay", "tooltip": "Weight decay","size": 800},
+         {"name": "Epsilon", "tooltip": "Small value added to avoid devision by zero","children": [
+            {"name": "1e-8", "size": 600}
+           ]},
+         {"name": "Momentum", "tooltip": "Adds momentum into updates to acclerate","children": [
+            {"name": "0.9", "size": 400}
+           ]},
+         {"name":"Rho", "tooltip":"Discounting factor for old gradients", "children":[{"name":"0.9", "size": 200}]}
+        ]
+       },
+       {
+        "name": "Adagrad",
+        "tooltip": "Adapts LR individually for each parameter based on its past gradients",
+        "children": [
+         {"name": "Learning Rate", "tooltip": "Step size at which models weights are updated","children": [
+            {"name": "1.0", "size": 2500},
+            {"name": "0.1", "size": 2500}
+           ]},
+         {"name":"Accumulator Value", "tooltip":"Starting value of accumulators", "children":[{"name":"0.1", "size":800}]},
+         {"name": "Epsilon", "children": [
+            {"name": "1e-07", "tooltip": "Small value added to avoid devision by zero", "size": 1200}
+           ]}
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Regularization", "tooltip":"Applies penalties on layer parameters",
+      "children": [
+       {"name": "L1", "tooltip":"L1 regularization penalty",
+       "children": [
+        {"name": "Alpha", "children":[{"name":"0.01", "size":700}]}
+       ]},
+       {"name": "L2", "tooltip":"L2 regularization penalty",
+       "children": [
+        {"name": "Alpha", "children":[{"name":"0.01", "size":1000}]}
+       ]},
+       {"name": "L1L2", "tooltip":"Both L1 an L2 regularization penalty",
+       "children": [
+        {"name": "L1", "children":[{"name":"0.01", "size":300}]},
+        {"name": "L2", "children":[{"name":"0.01", "size":300}]}
+       ]},
+       {"name": "Layer Weight Constraints", "tooltip":"Regularization Constraints on weights of layer",
+       "children": [
+        {"name": "MaxNorm", "tooltip": "Constraints weight to have norm less than given value", "children":[{"name":"max value", "tooltip": "2", "size":400}]},
+        {"name": "MinMaxNorm", "tooltip": "Constraints weight to have norm between boundsless than given value", 
+        "children":[
+         {"name":"min value", "tooltip": "0", "size":70},
+         {"name":"max value", "tooltip": "1", "size":70},
+         {"name":"axis", "tooltip": "Along which axis to calculate weight norms", "size":70}
+         ]},
+         {"name":"NonNeg", "tooltip":"Weights to be non-negative", "size":100},
+         {"name":"UnitNorm", "tooltip": "Weight to have unit norm", "size":150}
+         ]},
+       {"name": "DropoutRate", "tooltip": "randomly sets input units to 0","size": 900},
+       {"name": "BatchNormalization", 
+       "children": [
+        {"name": "Momentum", "tooltip": "0.99","size": 400},
+        {"name": "Epsilon", "tooltip":"Small value added to avoid devision by zero" ,"size": 400}
+       ]},
+       {"name": "DataAugmentation", 
+       "children": [
+        {"name": "Flip", "size": 200},
+        {"name": "Zoom", "size": 200},
+        {"name": "Shear", "size": 200},
+        {"name": "Shift", "size": 200},
+        {"name": "Rotation", "size": 200}
+       ]},
+       {"name": "EarlyStoping", 
+       "children": [
+        {"name": "Patience", "size": 500},
+        {"name": "Delta", "size": 500}
+       ]}
+      ]
+     }
+    ]
+   }

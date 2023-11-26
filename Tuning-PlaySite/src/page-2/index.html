@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme/theme.css"></link>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuning PlaySite - BatchSize</title>
+    <style>
+        /* CSS styling */
+        .chart {
+            display: block;
+            margin: auto;
+            height: 500px;
+            width: 500px;
+        }
+
+        .axis path,
+        .axis line {
+            fill: none;
+            stroke: #000;
+            shape-rendering: crispEdges;
+        }
+
+        #chart3 {
+            height: 500px;
+            width: 500px;
+            margin: auto;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <h2>1. Choosing Batch Size</h2>
+        <p>Batch Size determines the number of training samples propogated through a model. But does it impact model's performance? </p>
+        <p>What do you think is the relation between batch size and validation accuracy? Draw how you expect the line to look.</p>
+        <div id="chart" class="chart"></div>
+        <p>We can see that increasing batch size increases validation accuracy. But one important note, in this case, is, all hyperparameters are the same for each of the above-plotted batch sizes. Adam is the optimizer used and model is trained for 10 epochs.</p>
+        
+        <p>There are situations where a batch size of 32 performs better with the stochastic gradient descent (SGD) optimizer instead of Adam. If we were to optimize all hyperparameters independently for each batch size, what can we expect the resulting graph to look like?</p>
+
+        <!-- Second Chart -->
+        <div id="chart2" class="chart"></div>
+        <p>By using the best hyperparameters for individual batch sizes, we can see that there is no effect of increasing batch size on performance.</p>
+        <p>Any batch size works. However, the configurations of other hyperparameters, such as the number of epochs, the optimizer, and the regularizer, need to be adjusted based on the chosen batch size. Therefore, it is recommended to select a batch size first before tuning the other hyperparameters.</p>
+        <br/>
+        <p>In case you are curious to know what will be the use of tuning batch size, hover below.</p>
+
+        <!-- Third Chart -->
+        <div id="chart3"></div>
+        
+        
+        <script src="https://d3js.org/d3.v7.js"></script>
+        <script src="script.js"></script>
+        <p><span class="custom-line">*Dotted blue line is only to show the trajectory</span></p>
+        <p>TL;DR: Choose the largest available batch size for faster training and experimentation.</p>
+        <p>As the batch size increases, the number of steps required to achieve a certain performance decreases until reaching a certain batch size. Beyond that limit, the number of steps needed remains the same.</p>
+    </div>
+
+</body>
+</html>

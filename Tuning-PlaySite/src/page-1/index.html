@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="page-1.css"></link> -->
+    <link rel="stylesheet" href="../theme/theme.css"></link>
+</head>
+
+<body>
+    <div class="main-container">
+        <h3>Team Members</h3>
+        <p>Megha Chandra Nandyala, Amisha Himanshu Somaiya, Shao-Jung Kan, Wenzheng Zhao</p>
+        <h3>WalkThrough</h3>
+        <iframe width="600" height="355" src="https://www.youtube.com/embed/YOd1fF9aK_E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <p>For a comprehensive understanding of all the information present here, refer our detailed written <a href="https://drive.google.com/file/d/1rt8Q5L9MBcVQNRgphM7TwOcMxEtz8f5-/view?usp=sharing" target="_blank">file</a>.
+            For detailed design rationale, read our <a href="https://github.com/cse512-23s/Tuning-PlaySite/tree/main" target="_blank">README</a>
+        <h3>Motivation</h3>
+        <p> Setting and tuning these hyperparameters is extremely difficult because there are large number of hyperparameters, and each hyperparameter can take on multiple values. One hyperparameter can affect another, thus understanding the complex dependencies requires a lot of experimentation which is time-consuming and expensive. Worst of all there is no universal solution, as one set of hyperparameters won’t work for a different problem/model. So we provide a comprehensive approach to this problem. To know more about hyperparameters refer to this <a href="https://www.javatpoint.com/hyperparameters-in-machine-learning">link</a>.</p>
+        <h1>Tuning Strategy:</h1>
+        <h2>Starting with a model configuration</h2>
+        <p>Model architectures typically have various hyperparameters that determine the model's size and other details (e.g. number of layers, layer width, type of activation function). We suggest starting with small standard models and gradually increasing complexity. Try to choose standard model configuration, so one doesn’t have to spend a lot of time tuning model hyper-parameters. Choose a starting optimizer, epoch, and performance metrics.</p>
+        <p>Throughout this site, we will be using ResNet50 model with Adam optimizer trained on CIFAR-10 dataset for 50 epochs as the base configuration unless specified otherwise.</p>
+    </div>
+</body>
+</html>
