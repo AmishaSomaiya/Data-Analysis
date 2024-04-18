@@ -1,4 +1,6 @@
 /*
+EASY - SELECT 
+
 https://leetcode.com/problems/find-customer-referee/description/?envType=study-plan-v2&envId=top-sql-50
 
 Table: Customer
@@ -15,8 +17,6 @@ Each row of this table indicates the id of a customer, their name, and the id of
 Find the names of the customer that are not referred by the customer with id = 2.
 Return the result table in any order.
 
-EASY
-
 LOGIC:
 1. We need to return names not referred by 2 
    i.e. all names that don't have referee_id = 2 
@@ -30,7 +30,6 @@ LOGIC:
    avoid 2 comparisons but having single comparison of all referee_ids with !=2 i.e. <> 2 
    and null handling is implicit, i.e. if null then replace with 0 and then compare
    now single comparison with 2 so a lot more efficient
-
 
 */
 

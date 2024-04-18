@@ -1,4 +1,6 @@
 /*
+EASY - SELECT 
+
 https://leetcode.com/problems/recyclable-and-low-fat-products/description/?envType=study-plan-v2&envId=top-sql-50 
 Table: Products
 
@@ -15,7 +17,7 @@ recyclable is an ENUM (category) of types ('Y', 'N') where 'Y' means this produc
 Write a solution to find the ids of products that are both low fat and recyclable.
 Return the result table in any order.
 
-EASY
+
 */
 
 
