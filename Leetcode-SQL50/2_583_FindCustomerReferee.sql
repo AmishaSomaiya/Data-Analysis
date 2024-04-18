@@ -32,7 +32,7 @@ LOGIC:
    now single comparison with 2 so a lot more efficient
 
 */
-
+ 
 -- Solution 1
 SELECT name
 FROM Customer

@@ -1,6 +1,6 @@
 /*
 EASY - SELECT 
-Table: World
+Table: World 
 
 +-------------+---------+
 | Column Name | Type    |

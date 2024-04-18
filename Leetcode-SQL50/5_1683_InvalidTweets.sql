@@ -1,7 +1,7 @@
 /*
 
 EASY - SELECT 
-Table: Tweets
+Table: Tweets 
 
 +----------------+---------+
 | Column Name    | Type    |

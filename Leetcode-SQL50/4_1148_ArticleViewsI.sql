@@ -1,6 +1,6 @@
 /*
 EASY - SELECT 
-Table: Views
+Table: Views 
 
 +---------------+---------+
 | Column Name   | Type    |
