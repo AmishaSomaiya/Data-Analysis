@@ -7,7 +7,7 @@ https://leetcode.com/problems/replace-employee-id-with-the-unique-identifier/des
 Table: Employees
 
 +---------------+---------+
-| Column Name   | Type    |
+| Column Name   | Type    |     
 +---------------+---------+
 | id            | int     |
 | name          | varchar |
