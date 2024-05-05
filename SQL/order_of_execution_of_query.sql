@@ -14,7 +14,7 @@ FROM mytable
     ORDER BY column ASC/DESC
     LIMIT count OFFSET COUNT;
 
-Query order of execution
+Query order of execution FWGHOS
 1. FROM and JOINS
 2. WHERE
 3. GROUP BY
